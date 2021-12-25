@@ -6,7 +6,7 @@ using NakshiShop.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<NakshiShopContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NakshiShopContext")));
+    options.UseInMemoryDatabase(builder.Configuration.GetConnectionString("NakshiShopContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

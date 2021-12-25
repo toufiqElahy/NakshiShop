@@ -260,3 +260,4 @@ C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.dl
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\ref\NakshiShop.dll
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.pdb
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.genruntimeconfig.cache
+C:\Users\tapos\source\repos\NakshiShop\NakshiShop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll

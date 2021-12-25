@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZxFoa6G4wAJDeNjQEIb9pglaS8QpL0rURywk2QRKZ2G+ZdDBoNVt5mD5+hahTla77Jr1/UG2674u0//+KpQeRA==",
+  "dgSpecHash": "alrrc+hz3Z4+cjpMwtp0AmBD+pCDby2vqyQiEvb51hzi50Um6U8IPezO9o/9caxDfXJE7lKs2ZXygZKG04gChA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\NakshiShop.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.1\\microsoft.entityframeworkcore.analyzers.6.0.1.nupkg.sha512",
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.1\\microsoft.entityframeworkcore.design.6.0.1.nupkg.sha512",
+    "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.1\\microsoft.entityframeworkcore.inmemory.6.0.1.nupkg.sha512",
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.1\\microsoft.entityframeworkcore.relational.6.0.1.nupkg.sha512",
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.1\\microsoft.entityframeworkcore.sqlserver.6.0.1.nupkg.sha512",
     "C:\\Users\\tapos\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.1\\microsoft.entityframeworkcore.tools.6.0.1.nupkg.sha512",

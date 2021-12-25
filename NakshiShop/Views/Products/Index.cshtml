@@ -8,7 +8,7 @@
 
     <!-- Shop Products Section Start -->
     <div class="section section-padding pt-0">
-
+         
         <!-- Shop Toolbar Start -->
         <div class="shop-toolbar section-fluid border-bottom">
             <div class="container">
@@ -147,20 +147,20 @@
                 <div id="shop-products" class="products isotope-grid row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
 
                     <div class="grid-sizer col-1"></div>
-
+                    @foreach (var item in Model.Products) {
                     <div class="grid-item col featured">
                         <div class="product">
                             <div class="product-thumb">
-                                <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-17.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-17-hover.webp" alt="Product Image">
+                                <a asp-action="Details" asp-route-id="@item.Id" class="image">
+                                    <img src="@item.ImagePath" alt="Product Image">
+                                    <img class="image-hover " src="@item.ImagePath" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
                             <div class="product-info">
-                                <h6 class="title"><a href="product-details.html">3D Attractive Pot</a></h6>
+                                <h6 class="title"><a href="product-details.html">@item.Catagory</a></h6>
                                 <span class="price">
-                                    $90.00
+                                    BDT 450.00
                                 </span>
                                 <div class="product-buttons">
                                     <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fal fa-search"></i></a>
@@ -170,7 +170,8 @@
                             </div>
                         </div>
                     </div>
-
+                    }
+@*
                     <div class="grid-item col new">
                         <div class="product">
                             <div class="product-thumb">
@@ -532,7 +533,7 @@
                             </div>
                         </div>
                     </div>
-
+*@
                 </div>
                 <!-- Products End -->
                 <div class="text-center learts-mt-70">

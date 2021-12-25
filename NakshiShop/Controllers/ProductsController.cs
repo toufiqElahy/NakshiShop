@@ -68,8 +68,16 @@ namespace NakshiShop.Controllers
         }
 
         // GET: Products/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Product
+                                            orderby m.Catagory
+                                            select m.Catagory;
+
+            var catagories = new SelectList(await genreQuery.Distinct().ToListAsync());
+            ViewBag.catagories = catagories;
+
             return View();
         }
 
@@ -92,6 +100,16 @@ namespace NakshiShop.Controllers
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Product
+                                            orderby m.Catagory
+                                            select m.Catagory;
+
+            var catagories = new SelectList(await genreQuery.Distinct().ToListAsync());
+            ViewBag.catagories = catagories;
+
+            //return View();
+
             if (id == null)
             {
                 return NotFound();

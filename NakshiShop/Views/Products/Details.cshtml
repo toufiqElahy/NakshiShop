@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+ 
     <!-- Single Products Section Start -->
     <div class="section section-padding border-bottom">
         <div class="container">
@@ -20,16 +20,16 @@
                         ]'><i class="far fa-expand"></i></button>
                         <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="product-video-popup video-popup hintT-left" data-hint="Click to see video"><i class="fal fa-play"></i></a>
                         <div class="product-gallery-slider">
-                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-1.webp">
+                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-1.webp">
                                 <img src="/assets/images/product/single/1/product-1.webp" alt="">
                             </div>
-                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-2.webp">
+                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.webp">
                                 <img src="/assets/images/product/single/1/product-2.webp" alt="">
                             </div>
-                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-3.webp">
+                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-3.webp">
                                 <img src="/assets/images/product/single/1/product-3.webp" alt="">
                             </div>
-                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-4.webp">
+                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-4.webp">
                                 <img src="/assets/images/product/single/1/product-4.webp" alt="">
                             </div>
                         </div>
@@ -64,10 +64,10 @@
                             </span>
                             <a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
                         </div>
-                        <h3 class="product-title">Cleaning Dustpan & Brush</h3>
-                        <div class="product-price">£38.00 – £50.00</div>
+                        <h3 class="product-title">@Html.DisplayFor(model => model.Catagory)</h3>
+                        <div class="product-price">£ @Model.Price</div>
                         <div class="product-description">
-                            <p>Easy clip-on handle – Hold the brush and dustpan together for storage; the dustpan edge is serrated to allow easy scraping off the hair without entanglement. High-quality bristles – no burr damage, no scratches, thick and durable, comfortable to remove dust and smaller particles.</p>
+                            <p>@Model.Description</p>
                         </div>
                         <div class="product-variations">
                             <table>

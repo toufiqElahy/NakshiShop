@@ -15,7 +15,11 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Catagory" class="control-label"></label>
-                <input asp-for="Catagory" class="form-control" />
+
+                <select asp-for="Catagory" asp-items="ViewBag.catagories">
+            <option value="">All</option>
+        </select>
+                @*<input asp-for="Catagory" class="form-control" />*@
                 <span asp-validation-for="Catagory" class="text-danger"></span>
             </div>
             <div class="form-group">

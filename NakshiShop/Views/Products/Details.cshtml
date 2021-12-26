@@ -13,17 +13,17 @@
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-images">
                         <button class="product-gallery-popup hintT-left" data-hint="Click to enlarge" data-images='[
-                            {"src": "/assets/images/product/single/1/product-zoom-1.webp", "w": 700, "h": 1100},
-                            {"src": "/assets/images/product/single/1/product-zoom-2.webp", "w": 700, "h": 1100},
+                            {"src": "@Model.ImagePath", "w": 700, "h": 1100}
+                @*            {"src": "/assets/images/product/single/1/product-zoom-2.webp", "w": 700, "h": 1100},
                             {"src": "/assets/images/product/single/1/product-zoom-3.webp", "w": 700, "h": 1100},
-                            {"src": "/assets/images/product/single/1/product-zoom-4.webp", "w": 700, "h": 1100}
+                            {"src": "/assets/images/product/single/1/product-zoom-4.webp", "w": 700, "h": 1100}*@
                         ]'><i class="far fa-expand"></i></button>
                         <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="product-video-popup video-popup hintT-left" data-hint="Click to see video"><i class="fal fa-play"></i></a>
                         <div class="product-gallery-slider">
-                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-1.webp">
-                                <img src="/assets/images/product/single/1/product-1.webp" alt="">
+                            <div class="product-zoom" data-image="@Model.ImagePath">
+                                <img src="@Model.ImagePath" alt="">
                             </div>
-                            <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.webp">
+                            @*<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.webp">
                                 <img src="/assets/images/product/single/1/product-2.webp" alt="">
                             </div>
                             <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-3.webp">
@@ -31,13 +31,13 @@
                             </div>
                             <div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-4.webp">
                                 <img src="/assets/images/product/single/1/product-4.webp" alt="">
-                            </div>
+                            </div>*@
                         </div>
                         <div class="product-thumb-slider">
                             <div class="item">
-                                <img src="/assets/images/product/single/1/product-thumb-1.webp" alt="">
+                                <img src="@Model.ImagePath" alt="">
                             </div>
-                            <div class="item">
+                            @*<div class="item">
                                 <img src="/assets/images/product/single/1/product-thumb-2.webp" alt="">
                             </div>
                             <div class="item">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="item">
                                 <img src="/assets/images/product/single/1/product-thumb-4.webp" alt="">
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <!-- Product Summery Start -->
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-summery">
-                        <div class="product-nav">
+                        @*<div class="product-nav">
                             <a href="#"><i class="fal fa-long-arrow-left"></i></a>
                             <a href="#"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
@@ -63,9 +63,9 @@
                                 <span class="rating-active" style="width: 100%;">ratings</span>
                             </span>
                             <a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
-                        </div>
+                        </div>*@
                         <h3 class="product-title">@Html.DisplayFor(model => model.Catagory)</h3>
-                        <div class="product-price">£ @Model.Price</div>
+                        <div class="product-price">BDT @Model.Price</div>
                         <div class="product-description">
                             <p>@Model.Description</p>
                         </div>
@@ -76,13 +76,13 @@
                                         <td class="label"><span>Size</span></td>
                                         <td class="value">
                                             <div class="product-sizes">
-                                                <a href="#">Large</a>
-                                                <a href="#">Medium</a>
-                                                <a href="#">Small</a>
+                                                <a href="#">@Model.Size</a>
+                                                @*<a href="#">Medium</a>
+                                                <a href="#">Small</a>*@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    @*<tr>
                                         <td class="label"><span>Color</span></td>
                                         <td class="value">
                                             <div class="product-colors">
@@ -90,7 +90,7 @@
                                                 <a href="#" data-bg-color="#ffffff"></a>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>*@
                                     <tr>
                                         <td class="label"><span>Quantity</span></td>
                                         <td class="value">
@@ -109,25 +109,25 @@
                             <a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> Add to Cart</a>
                             <a href="#" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top" data-hint="Compare"><i class="fal fa-random"></i></a>
                         </div>
-                        <div class="product-brands">
+                        @*<div class="product-brands">
                             <span class="title">Brands</span>
                             <div class="brands">
                                 <a href="#"><img src="/assets/images/brands/brand-3.webp" alt=""></a>
                                 <a href="#"><img src="/assets/images/brands/brand-8.webp" alt=""></a>
                             </div>
-                        </div>
+                        </div>*@
                         <div class="product-meta">
                             <table>
                                 <tbody>
-                                    <tr>
+                                    @*<tr>
                                         <td class="label"><span>SKU</span></td>
                                         <td class="value">0404019</td>
-                                    </tr>
+                                    </tr>*@
                                     <tr>
                                         <td class="label"><span>Category</span></td>
                                         <td class="value">
                                             <ul class="product-category">
-                                                <li><a href="#">Kitchen</a></li>
+                                                <li><a href="#">@Model.Catagory</a></li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -136,10 +136,7 @@
                                         <td class="value">
                                             <ul class="product-tags">
                                                 <li><a href="#">handmade</a></li>
-                                                <li><a href="#">learts</a></li>
-                                                <li><a href="#">mug</a></li>
-                                                <li><a href="#">product</a></li>
-                                                <li><a href="#">learts</a></li>
+                                                <li><a href="#">nakshi</a></li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -169,7 +166,7 @@
     <!-- Single Products Section End -->
 
     <!-- Single Products Infomation Section Start -->
-    <div class="section section-padding border-bottom">
+    @*<div class="section section-padding border-bottom">
         <div class="container">
 
             <ul class="nav product-info-tab-list">
@@ -305,11 +302,11 @@
             </div>
 
         </div>
-    </div>
+    </div>*@
     <!-- Single Products Infomation Section End -->
 
     <!-- Recommended Products Section Start -->
-    <div class="section section-padding">
+    @*<div class="section section-padding">
         <div class="container">
 
             <!-- Section Title Start -->
@@ -550,5 +547,5 @@
             <!-- Products End -->
 
         </div>
-    </div>
+    </div>*@
     <!-- Recommended Products Section End -->

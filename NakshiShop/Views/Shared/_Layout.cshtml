@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 
@@ -101,27 +103,25 @@
                     <div class="header6-search">
                         <form action="#" >
                             <div class="row g-0">
-                                <div class="col-auto">
-                                    <select class="search-select" >
-                                       <option value="">All Catagory</option>>
-                                        @*<option value="0">All Categories</option>
-                                        <option value="kids-babies">Kids &amp; Babies</option>
-                                        <option value="home-decor">Home Decor</option>
-                                        <option value="gift-ideas">Gift ideas</option>
-                                        <option value="kitchen">Kitchen</option>
-                                        <option value="toys">Toys</option>
-                                        <option value="kniting-sewing">Kniting &amp; Sewing</option>
-                                        <option value="pots">Pots</option>*@
-                                    </select>
-                                    @*<select class="nice-select" asp-for="ProductCatagory" asp-items="Model.Catagories">
-                                       <option value="">All</option>
-                                    </select>
-                                    <span asp-validation-for="ProductCatagory" class="text-danger"></span>*@
-                                </div>
-                                <div class="col">
+
+                            <form asp-controller="Products" asp-action="Index" method="get">
+                            <div class="col-auto">
+                            <select class="search-select" id="ProductCatagory" name="ProductCatagory" asp-items="StaticData.Catagories">
+                                <option value="">All Catagory</option>
+                            </select>
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="SearchString" placeholder="Search Products..." />
+                                
+                            </div>
+                            <button type="submit"><i class="fal fa-search"></i></button>
+                            
+                            </form>
+                                @*<div class="col">
                                     <input type="text" placeholder="Search Products...">
                                 </div>
-                                <button type="submit"><i class="fal fa-search"></i></button>
+                                <button type="submit"><i class="fal fa-search"></i></button>*@
                             </div>
                         </form>
                     </div>
@@ -670,21 +670,25 @@
         <div class="inner">
             <div class="offcanvas-search-form">
                 <button class="offcanvas-close">×</button>
-                <form action="#">
+                <form action="" >
                     <div class="row mb-n3">
                         <div class="col-lg-8 col-12 mb-3"><input type="text" placeholder="Search Products..."></div>
                         <div class="col-lg-4 col-12 mb-3">
-                            <select class="search-select select2-basic">
-                                <option value="0">All Categories</option>
-                                <option value="kids-babies">Kids &amp; Babies</option>
-                                <option value="home-decor">Home Decor</option>
-                                <option value="gift-ideas">Gift ideas</option>
-                                <option value="kitchen">Kitchen</option>
-                                <option value="toys">Toys</option>
-                                <option value="kniting-sewing">Kniting &amp; Sewing</option>
-                                <option value="pots">Pots</option>
+                            @*<select class="search-select select2-basic" asp-for="ProductCatagory" asp-items="Model.Catagories">
+                                
+                                <option value="">All Categories</option>
+                                
+                            </select>*@
+                            <form asp-controller="Products" asp-action="Index" method="get">
+                            <div class="col-auto">
+                            <select class="search-select select2-basic" id="ProductCatagory" name="ProductCatagory" asp-items="StaticData.Catagories">
+                                <option value="">All</option>
                             </select>
+                            </div>
+
+                            </form>
                         </div>
+                        <button type="submit" class="btn btn-success btn-sm"><i class="fal fa-search"></i></button>
                     </div>
                 </form>
             </div>

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using NakshiShop.Data;
 
 namespace NakshiShop.Models
@@ -11,9 +12,12 @@ namespace NakshiShop.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<NakshiShopContext>>()))
             {
+                
                 // Look for any movies.
                 if (context.Product.Any())
                 {
+                    //catagories dropdownlist from database
+                    RetriveCatgories(context);
                     return;   // DB has been seeded
                 }
 
@@ -131,7 +135,21 @@ namespace NakshiShop.Models
                     }
                 );
                 context.SaveChanges();
+
+                //catagories dropdownlist from database
+                RetriveCatgories(context);
             }
+
+        }
+
+        public static void RetriveCatgories(NakshiShopContext context)
+        {
+            IQueryable<string> catagoryQuery = from m in context.Product
+                                               orderby m.Catagory
+                                               select m.Catagory;
+            StaticData.Catagories = new SelectList(catagoryQuery.Distinct().ToList());
+
+
         }
     }
 }

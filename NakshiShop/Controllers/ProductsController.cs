@@ -24,7 +24,7 @@ namespace NakshiShop.Controllers
         public async Task<IActionResult> Index(string productCatagory, string searchString)
         {
             // Use LINQ to get list of genres.
-            IQueryable<string> genreQuery = from m in _context.Product
+            IQueryable<string> catagoryQuery = from m in _context.Product
                                             orderby m.Catagory
                                             select m.Catagory;
             var products = from m in _context.Product
@@ -42,7 +42,7 @@ namespace NakshiShop.Controllers
 
             var productCatagoryVM = new ProductCatagoryViewModel
             {
-                Catagories = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Catagories = new SelectList(await catagoryQuery.Distinct().ToListAsync()),
                 Products = await products.ToListAsync()
             };
 

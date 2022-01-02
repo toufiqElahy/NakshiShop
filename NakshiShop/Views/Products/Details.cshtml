@@ -20,7 +20,7 @@
                         ]'><i class="far fa-expand"></i></button>
                         <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="product-video-popup video-popup hintT-left" data-hint="Click to see video"><i class="fal fa-play"></i></a>
                         <div class="product-gallery-slider">
-                            <div class="product-zoom" data-image="@Model.ImagePath">
+                            <div class="product-zoom" data-image="@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)">
                                 <img src="@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)" alt="">
                             </div>
                             @*<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.webp">

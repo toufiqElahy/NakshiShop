@@ -89,10 +89,24 @@ namespace NakshiShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Catagory,Size,Quantity,Description,Price,ImagePath")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Catagory,Size,Quantity,Description,Price,ImagePath")] Product product, IFormFile image)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
+                if (image != null)
+                {
+
+                    //Set Key Name
+                    string ImageName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+                    product.ImagePath = ImageName;
+                    //Get url To Save
+                    string SavePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", ImageName);
+
+                    using (var stream = new FileStream(SavePath, FileMode.Create))
+                    {
+                        image.CopyTo(stream);
+                    }
+                }
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

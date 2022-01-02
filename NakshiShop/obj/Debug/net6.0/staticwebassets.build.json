@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QSXg3Euu9bHwkzXlhng9/R4mPIW3xrv4NHhYqL6psec=",
+  "Hash": "+O0Kz/sh6AxH/+3EPBqPR1iLKyJFxxsiP8lfY9IDQZs=",
   "Source": "NakshiShop",
   "BasePath": "_content/NakshiShop",
   "Mode": "Default",
@@ -8158,6 +8158,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\img\\ba7ed409-6619-4639-817b-3d568371c818.jpg",
+      "SourceId": "NakshiShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\",
+      "BasePath": "_content/NakshiShop",
+      "RelativePath": "img/ba7ed409-6619-4639-817b-3d568371c818.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ba7ed409-6619-4639-817b-3d568371c818.jpg"
     },
     {
       "Identity": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\js\\site.js",

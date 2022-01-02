@@ -50,7 +50,7 @@ namespace NakshiShop.Controllers
         }
 
         // GET: Products/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, bool isModal=false)
         {
             if (id == null)
             {
@@ -64,6 +64,9 @@ namespace NakshiShop.Controllers
                 return NotFound();
             }
 
+            if (isModal) {
+                return PartialView("IndexModal",product);
+            }
             return View(product);
         }
 

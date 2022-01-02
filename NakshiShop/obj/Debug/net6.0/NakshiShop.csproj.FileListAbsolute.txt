@@ -261,3 +261,4 @@ C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.pd
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.genruntimeconfig.cache
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout - Copy.cshtml.rz.scp.css
+C:\Users\tapos\source\repos\NakshiShop\NakshiShop\obj\Debug\net6.0\NakshiShop.csproj.AssemblyReference.cache

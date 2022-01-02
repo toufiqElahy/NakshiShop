@@ -149,7 +149,6 @@ namespace NakshiShop.Models
                                                select m.Catagory;
             StaticData.Catagories = new SelectList(catagoryQuery.Distinct().ToList());
 
-
         }
     }
 }

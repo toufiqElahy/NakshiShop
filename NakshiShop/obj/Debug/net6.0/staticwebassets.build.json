@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+O0Kz/sh6AxH/+3EPBqPR1iLKyJFxxsiP8lfY9IDQZs=",
+  "Hash": "mFrz/64UFfJ7zWeqsasn1uVk+e0ARjFsxTTjSUIrac8=",
   "Source": "NakshiShop",
   "BasePath": "_content/NakshiShop",
   "Mode": "Default",
@@ -8175,6 +8175,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\ba7ed409-6619-4639-817b-3d568371c818.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\img\\d1539cb5-b186-40d9-a091-be1b88e5c87f.jpg",
+      "SourceId": "NakshiShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\",
+      "BasePath": "_content/NakshiShop",
+      "RelativePath": "img/d1539cb5-b186-40d9-a091-be1b88e5c87f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\d1539cb5-b186-40d9-a091-be1b88e5c87f.jpg"
     },
     {
       "Identity": "C:\\Users\\tapos\\source\\repos\\NakshiShop\\NakshiShop\\wwwroot\\js\\site.js",

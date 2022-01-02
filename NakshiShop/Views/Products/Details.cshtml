@@ -13,7 +13,7 @@
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-images">
                         <button class="product-gallery-popup hintT-left" data-hint="Click to enlarge" data-images='[
-                            {"src": "@Model.ImagePath", "w": 700, "h": 1100}
+                            {"src": "@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)", "w": 700, "h": 1100}
                 @*            {"src": "/assets/images/product/single/1/product-zoom-2.webp", "w": 700, "h": 1100},
                             {"src": "/assets/images/product/single/1/product-zoom-3.webp", "w": 700, "h": 1100},
                             {"src": "/assets/images/product/single/1/product-zoom-4.webp", "w": 700, "h": 1100}*@
@@ -21,7 +21,7 @@
                         <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="product-video-popup video-popup hintT-left" data-hint="Click to see video"><i class="fal fa-play"></i></a>
                         <div class="product-gallery-slider">
                             <div class="product-zoom" data-image="@Model.ImagePath">
-                                <img src="@Model.ImagePath" alt="">
+                                <img src="@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)" alt="">
                             </div>
                             @*<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.webp">
                                 <img src="/assets/images/product/single/1/product-2.webp" alt="">

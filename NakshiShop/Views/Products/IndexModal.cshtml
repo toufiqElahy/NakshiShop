@@ -7,8 +7,8 @@
                     <div class="col-lg-6 col-12 learts-mb-30">
                         <div class="product-images">
                             <div class="product-gallery-slider-quickview">
-                                <div class="product-zoom" data-image="@Model.ImagePath">
-                                    <img src="@Model.ImagePath" alt="">
+                                <div class="product-zoom" data-image="@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)">
+                                    <img src="@(Model.ImagePath.StartsWith("http")? Model.ImagePath:"/img/"+Model.ImagePath)" alt="">
                                    
                                 </div>
                                 

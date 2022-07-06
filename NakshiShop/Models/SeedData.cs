@@ -115,15 +115,15 @@ namespace NakshiShop.Models
                         Description = "Is it stories such as this, or the intricacy of the weaves that made the Nakshi Kantha into an icon in Bengali folklore? It is true that such tales have endeared us to the humble Nakshi Kantha.",
                         Price = 600M
                     },
-                    new Product
-                    {
-                        ImagePath = "https://scontent.fdac33-2.fna.fbcdn.net/v/t39.30808-6/228092890_5757828270956166_4104899000445219488_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=0debeb&_nc_ohc=Dq8zBgf4G7MAX8tB5xg&_nc_ht=scontent.fdac33-2.fna&oh=00_AT_li2-Z2uHc76AafjubAfkgAl75Xq-6jIoX_2xPYPDmGA&oe=61CC3462",
-                        Catagory = "Fridge Handle Cover",
-                        Size = "S",
-                        Quantity = 1,
-                        Description = "Is it stories such as this, or the intricacy of the weaves that made the Nakshi Kantha into an icon in Bengali folklore? It is true that such tales have endeared us to the humble Nakshi Kantha.",
-                        Price = 170M
-                    },
+                    //new Product
+                    //{
+                    //    ImagePath = "https://scontent.fdac33-2.fna.fbcdn.net/v/t39.30808-6/228092890_5757828270956166_4104899000445219488_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=0debeb&_nc_ohc=Dq8zBgf4G7MAX8tB5xg&_nc_ht=scontent.fdac33-2.fna&oh=00_AT_li2-Z2uHc76AafjubAfkgAl75Xq-6jIoX_2xPYPDmGA&oe=61CC3462",
+                    //    Catagory = "Fridge Handle Cover",
+                    //    Size = "S",
+                    //    Quantity = 1,
+                    //    Description = "Is it stories such as this, or the intricacy of the weaves that made the Nakshi Kantha into an icon in Bengali folklore? It is true that such tales have endeared us to the humble Nakshi Kantha.",
+                    //    Price = 170M
+                    //},
                     new Product
                     {
                         ImagePath = "wall2.jpg",

@@ -15,7 +15,15 @@ namespace NakshiShop.Controllers
 
         public IActionResult Index()
         {
+            var lstVideo = ListVideo.Videoes();
+            ViewBag.Videoes = lstVideo;
             return View();
+        }
+        public IActionResult Video(decimal price)
+        {
+            var lstVideo = ListVideo.Videoes();
+            var model = lstVideo.FirstOrDefault(x => x.Price == price);
+            return Json(model);
         }
 
         public IActionResult Privacy()

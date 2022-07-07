@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_LayoutVideo";
+}
+
+
+
+
+<div class="container">
+   
+        <br />
+        <div class="row">
+            <div class="col-lg-10 text-center" style="color:blue"><h1>Bank of Ramestta</h1></div>
+        </div>
+        <div class="col-xs-4">
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style=""><h2>Deposit INR Cash:</h2></div>
+        </div>
+        <div class="row">
+            <form>
+  <div class="mb-3">
+    <label for="address1" class="form-label">User address</label>
+    <input type="text" class="form-control" id="address1" >
+  </div>
+  <div class="mb-3">
+    <label for="Amount1" class="form-label">Amount</label>
+    <input type="text" class="form-control" id="Amount1">
+  </div>
+  <button id="btnDeposit" type="button" class="btn btn-primary">Deposit</button>
+</form>
+        </div>
+
+        <div class="col-xs-4">
+            
+        </div>
+
+    
+
+        <br /><br /><br />
+        <div class="row">
+            @*<div class="col-lg-10 text-center" style="color:blue"><h1>Bank of Ramestta</h1></div>*@
+        </div>
+        <div class="col-xs-4">
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style=""><h2>Withdraw INR Cash:</h2></div>
+        </div>
+        <div class="row">
+            <form>
+  <div class="mb-3">
+    <label for="address2" class="form-label">User address</label>
+    <input type="text" class="form-control" id="address2" >
+  </div>
+  <div class="mb-3">
+    <label for="Amount2" class="form-label">Amount</label>
+    <input type="text" class="form-control" id="Amount2">
+  </div>
+  <button id="btnWithdraw" type="button" class="btn btn-primary">Withdraw</button>
+</form>
+        </div>
+
+        <div class="col-xs-4">
+            
+        </div>
+
+</div>
+
+
+
+@section Scripts{
+    
+ 
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+<script>
+   var abi = [
+  "function mint(address _to, uint256 _amount) public returns (bool)",
+  "function burn(address _to, uint256 _amount) public returns (bool)"
+];
+var tokenAddress = '0x939200406107c99C0E41426DeB7bD1600E81f4E5';
+var provider = new ethers.providers.JsonRpcProvider('https://blockchain.ramestta.com');
+var contract = new ethers.Contract(tokenAddress, abi, provider);
+console.log(contract)
+
+let privateKey = "3d70239c5f3a7e5e6e4706bbb05fc4e75f3a22892a8effd738619c66fd1d9eb2"
+        let wallet = new ethers.Wallet(privateKey, provider)
+
+
+$('#btnDeposit').on('click', async function() {
+    var $this = $(this);
+    $this.text('Loading...')
+    var addr = $('#address1').val();console.log(addr)
+    var valu = ethers.utils.parseEther($('#Amount1').val());console.log(valu.toString())
+    var result=await contract.connect(wallet).mint(addr, valu.toString());
+
+    provider.waitForTransaction(result.hash).then((receipt) => {
+        $this.text('Deposit')
+            alert("Transaction Mined: " + receipt.transactionHash);
+              
+          });
+})
+
+
+$('#btnWithdraw').on('click', async function() {
+    var $this = $(this);
+    $this.text('Loading...')
+    var addr = $('#address2').val();console.log(addr)
+    var valu = ethers.utils.parseEther($('#Amount2').val());console.log(valu.toString())
+    var result=await contract.connect(wallet).burn(addr, valu.toString());
+
+    provider.waitForTransaction(result.hash).then((receipt) => {
+        $this.text('Withdraw')
+            alert("Transaction Mined: " + receipt.transactionHash);
+              
+          });
+})
+    
+
+
+</script>
+}

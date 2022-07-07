@@ -19,6 +19,10 @@ namespace NakshiShop.Controllers
             ViewBag.Videoes = lstVideo;
             return View();
         }
+        public IActionResult Bank()
+        {
+            return View();
+        }
         public IActionResult Video(decimal price)
         {
             var lstVideo = ListVideo.Videoes();

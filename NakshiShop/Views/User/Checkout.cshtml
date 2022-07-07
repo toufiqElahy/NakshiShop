@@ -1,10 +1,10 @@
 ﻿@{
     string ip = "12.123";
-    int _min = 1000;
-    int _max = 9999;
+    int _min = 100;
+    int _max = 999;
     Random _rdm = new Random();
     var number= _rdm.Next(_min, _max);
-    string value = "10000000000"+number;
+    string value = number+"0000000000000";
     var users = VideoOwned.users;
     var lstVideoes = ViewBag.Videoes as List<Video>;
     var DomainName = "";//HttpContextAccessor.HttpContext.Request.Scheme + "://" + HttpContextAccessor.HttpContext.Request.Host;

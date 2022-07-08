@@ -54,7 +54,8 @@ namespace NakshiShop.Controllers
 
             _context.Add(cart);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Details", "Products", new { id=pid});
+            return RedirectToAction("Index","Products");
+            //return RedirectToAction("Details", "Products", new { id=pid});
         }
         public async Task<IActionResult> RemoveCart(int cid)//Wishlist
         {
@@ -72,15 +73,17 @@ namespace NakshiShop.Controllers
             var order = new Order();
             order.Ip = ip;
             order.Total = total;
+            order.Status = "InProgress";
 
             var carts = await _context.Cart.Include(x => x.Product).Where(x => x.Ip == ip && x.Status == "Active").ToListAsync();
-            foreach(var item in carts)
-            {
-                item.Status = "InActive";
-                item.Order = order;
-                item.OrderId = order.Id;
-            }
+            //foreach (var item in carts)
+            //{
+            //    item.Status = "InActive";
+            //    item.Order = order;
+            //    item.OrderId = order.Id;
+            //}
 
+            _context.RemoveRange(carts);
             _context.Add(order);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");

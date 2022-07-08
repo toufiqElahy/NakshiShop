@@ -2,7 +2,9 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
+@{
+    string cartCount = "";
+}
 
 <!-- Mirrored from template.hasthemes.com/learts/learts/index-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 Dec 2021 04:39:11 GMT -->
 <head>
@@ -135,7 +137,7 @@
                             <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">@cartCount</span><i class="fal fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -551,7 +553,7 @@
                             <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">@cartCount</span><i class="fal fa-shopping-cart"></i></a>
                         </div>
                         <div class="mobile-menu-toggle d-xl-none">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -597,7 +599,7 @@
                             <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">@cartCount</span><i class="fal fa-shopping-cart"></i></a>
                         </div>
                         <div class="mobile-menu-toggle">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -643,7 +645,7 @@
                             <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                            <a href="/User/Cart" class="offcanvas-toggle1"><span class="cart-count">@cartCount</span><i class="fal fa-shopping-cart"></i></a>
                         </div>
                         <div class="mobile-menu-toggle">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -975,7 +977,7 @@
                         <a href="/User/Wishlist"><span>3</span><i class="fal fa-heart"></i></a>
                     </div>
                     <div class="header-cart">
-                        <a href="/User/Cart"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
+                        <a href="/User/Cart"><span class="cart-count">@cartCount</span><i class="fal fa-shopping-cart"></i></a>
                     </div>
                 </div>
             </div>

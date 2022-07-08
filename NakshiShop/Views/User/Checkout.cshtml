@@ -437,7 +437,7 @@
                                 </tr>
                                 <tr class="total">
                                     <th>Total</th>
-                                    <td><strong><span>0.@number RAMA</span></strong></td>
+                                    <td><strong><span>0.00@(number) RAMA</span></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -536,7 +536,7 @@ var contract = new ethers.Contract(tokenAddress, abi, provider);
 console.log(contract)
 var myAddress = "0x61A4660b9A48337b9e245a0Ec11E618fB44eB0Ff";
 //var filter = contract.filters.Transfer(null, myAddress)
-var filter1 = contract.filters.LogTransfer(null,null,myAddress)
+var filter1 = contract.filters.LogTransfer(null, null, myAddress);
 contract.on(filter1, (token,from, to, amount,input1,input2,output1,output2, event) => {
     var val = ethers.utils.formatEther(amount.toString());
     console.log('@value'+' f1 '+amount.toString())

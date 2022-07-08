@@ -18,7 +18,7 @@
 
                 {
                         <tr>
-                            <td class="thumbnail"><a href="product-details.html"><img src="assets/images/product/cart-product-1.webp" alt="cart-product-1"></a></td>
+                            <td class="thumbnail"><a href="/products/details?id=@item.Product.Id"><img src="@(item.Product.ImagePath.StartsWith("http")? item.Product.ImagePath:"/img/"+item.Product.ImagePath)" alt="cart-product-1"></a></td>
                             <td class="name"> <a href="product-details.html">@item.Product.Catagory</a></td>
                             <td class="price"><span>@item.Product.Price</span></td>
                             <td class="quantity">

@@ -1,4 +1,6 @@
-﻿<div class="section section-padding">
+﻿@model List<Cart>
+
+<div class="section section-padding">
         <div class="container">
             <form class="cart-form" action="#">
                 <table class="cart-wishlist-table table">
@@ -12,10 +14,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach (var item in Model)
+
+                {
                         <tr>
                             <td class="thumbnail"><a href="product-details.html"><img src="assets/images/product/cart-product-1.webp" alt="cart-product-1"></a></td>
-                            <td class="name"> <a href="product-details.html">Walnut Cutting Board</a></td>
-                            <td class="price"><span>£100.00</span></td>
+                            <td class="name"> <a href="product-details.html">@item.Product.Catagory</a></td>
+                            <td class="price"><span>@item.Product.Price</span></td>
                             <td class="quantity">
                                 <div class="product-quantity">
                                     <span class="qty-btn minus"><i class="ti-minus"></i></span>
@@ -23,37 +28,11 @@
                                     <span class="qty-btn plus"><i class="ti-plus"></i></span>
                                 </div>
                             </td>
-                            <td class="subtotal"><span>£100.00</span></td>
-                            <td class="remove"><a href="#" class="btn">×</a></td>
+                            <td class="subtotal"><span>@item.Product.Price</span></td>
+                            <td class="remove"><a href="/User/RemoveCart?cid=@item.Id" class="btn">×</a></td>
                         </tr>
-                        <tr>
-                            <td class="thumbnail"><a href="product-details.html"><img src="assets/images/product/cart-product-2.webp" alt="cart-product-2"></a></td>
-                            <td class="name"> <a href="product-details.html">Lucky Wooden Elephant</a></td>
-                            <td class="price"><span>£35.00</span></td>
-                            <td class="quantity">
-                                <div class="product-quantity">
-                                    <span class="qty-btn minus"><i class="ti-minus"></i></span>
-                                    <input type="text" class="input-qty" value="1">
-                                    <span class="qty-btn plus"><i class="ti-plus"></i></span>
-                                </div>
-                            </td>
-                            <td class="subtotal"><span>£35.00</span></td>
-                            <td class="remove"><a href="#" class="btn">×</a></td>
-                        </tr>
-                        <tr>
-                            <td class="thumbnail"><a href="product-details.html"><img src="assets/images/product/cart-product-3.webp" alt="cart-product-3"></a></td>
-                            <td class="name"> <a href="product-details.html">Fish Cut Out Set</a></td>
-                            <td class="price"><span>£9.00</span></td>
-                            <td class="quantity">
-                                <div class="product-quantity">
-                                    <span class="qty-btn minus"><i class="ti-minus"></i></span>
-                                    <input type="text" class="input-qty" value="1">
-                                    <span class="qty-btn plus"><i class="ti-plus"></i></span>
-                                </div>
-                            </td>
-                            <td class="subtotal"><span>£9.00</span></td>
-                            <td class="remove"><a href="#" class="btn">×</a></td>
-                        </tr>
+                        }
+                      
                     </tbody>
                 </table>
              @*   <div class="row justify-content-between mb-n3">
@@ -69,7 +48,7 @@
                     </div>
                 </div>*@
                  <div class="cart-totals mt-5">
-                <h2 class="title">Cart totals <span class="amount">£242.00</span></h2>
+                @*<h2 class="title">Cart totals <span class="amount">£242.00</span></h2>*@
                
                 <a href="/User/Checkout" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
             </div>

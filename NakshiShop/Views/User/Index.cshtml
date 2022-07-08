@@ -1,4 +1,8 @@
-﻿<div class="section section-padding">
+﻿@model List<Order>
+@{
+    var i = 1;
+}
+<div class="section section-padding">
         <div class="container">
             <div class="row learts-mb-n30">
 
@@ -43,27 +47,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach (var item in Model)
+
+                {
                                             <tr>
-                                                <td>1</td>
-                                                <td>Aug 22, 2018</td>
-                                                <td>Pending</td>
-                                                <td>$3000</td>
-                                                <td><a href="shopping-cart.html">View</a></td>
+                                                <td>@i</td>
+                                                <td>@item.Date</td>
+                                                <td>@item.Status</td>
+                                                <td>$@item.Total</td>
+                                                <td><a href="#">View</a></td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>July 22, 2018</td>
-                                                <td>Approved</td>
-                                                <td>$200</td>
-                                                <td><a href="shopping-cart.html">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>June 12, 2017</td>
-                                                <td>On Hold</td>
-                                                <td>$990</td>
-                                                <td><a href="shopping-cart.html">View</a></td>
-                                            </tr>
+                                            i++;
+                                        }
                                         </tbody>
                                     </table>
                                 </div>

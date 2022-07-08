@@ -419,25 +419,25 @@
                             <tbody>
                                 <tr>
                                     <td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£100.00</span></td>
+                                    <td class="total"><span>$10.00</span></td>
                                 </tr>
                                 <tr>
                                     <td class="name">Pizza Plate Tray&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£22.00</span></td>
+                                    <td class="total"><span>$22.00</span></td>
                                 </tr>
                                 <tr>
                                     <td class="name">Minimalist Ceramic Pot - Pearl river, Large&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-                                    <td class="total"><span>£120.00</span></td>
+                                    <td class="total"><span>$12.00</span></td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr class="subtotal">
                                     <th>Subtotal</th>
-                                    <td><span>£242.00</span></td>
+                                    <td><span>$24.@number</span></td>
                                 </tr>
                                 <tr class="total">
                                     <th>Total</th>
-                                    <td><strong><span>£242.00</span></strong></td>
+                                    <td><strong><span>$24.@number</span></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -539,9 +539,10 @@ contract.on(filter1, (token,from, to, amount,input1,input2,output1,output2, even
     console.log('@value'+' f1 '+amount.toString())
     $('#btnProgress').html('Payment is Done. Received '+val +' RAMA' );
     if ('@value' == amount.toString()) {
-        alert('Successfully Paid..!')
+        alert('Successfully Paid..!');
+        location.href = '/User/PlaceOrder?total='+val;
     }
-    //location.href = '';
+    
 })
 
 

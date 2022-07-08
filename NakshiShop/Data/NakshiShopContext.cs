@@ -16,5 +16,7 @@ namespace NakshiShop.Data
         }
 
         public DbSet<NakshiShop.Models.Product> Product { get; set; }
+        public DbSet<NakshiShop.Models.Cart> Cart { get; set; }
+        public DbSet<NakshiShop.Models.Order> Order { get; set; }
     }
 }

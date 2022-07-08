@@ -4,7 +4,7 @@
     {
         public string Ip { get; set; }
         public int Id { get; set; }
-        public virtual List<Video> Videos { get; set; }
+        public virtual List<Cart> Carts { get; set; }
     }
     public static class VideoOwned
     {

@@ -30,7 +30,12 @@ namespace NakshiShop.Controllers
 
             return View();
         }
-        public async Task<IActionResult> Checkout()
+        public async Task<IActionResult> Checkout()//Wishlist
+        {
+
+            return View();
+        }
+        public async Task<IActionResult> Wishlist()//Wishlist
         {
 
             return View();
